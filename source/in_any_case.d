@@ -63,7 +63,11 @@ pure
 }
 unittest
 {
-    assert("hello.world".toCase(Case.pascal, ".") == "HelloWorld");
+    // Use "." as the word separator
+    expect("hello.world".toCase(Case.pascal, ".")).toEqual("HelloWorld");
+
+    // Force the input to be interpreted as camelCase or PascalCase
+    expect("helLo_woRld".toCase(Case.kebab, "")).toEqual("hel-lo_wo-rld");
 }
 
 version(unittest)
