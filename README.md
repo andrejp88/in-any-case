@@ -48,3 +48,5 @@ expect("hello world".toCase(spongebobCase)).toEqual("hElLo wOrLd");
 `wstring` (UTF-16) and `dstring` (UTF-32) inputs are accepted, but the
 library's internals will convert them to UTF-8 and then back. A bit
 wasteful, but it beats having the `Case` struct be a template.
+
+As of v1.0.0, the library is designed for the ASCII alphabet. Letters beyond those found in English may not be converted as expected.
