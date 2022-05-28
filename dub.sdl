@@ -1,0 +1,14 @@
+name "in-any-case"
+description "A library for converting strings into specific cases"
+authors "Andrej Petrović"
+copyright "Copyright © 2022, Andrej Petrović"
+license "MIT"
+
+configuration "library" {
+    targetType "library"
+}
+
+configuration "unittest" {
+    dependency "silly" version="~>1.2.0-dev.1"
+    dependency "exceeds-expectations" version="~>0.9.2"
+}

@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/in-any-case
+in-any-case.so
+in-any-case.dylib
+in-any-case.dll
+in-any-case.a
+in-any-case.lib
+in-any-case-test-*
+*.exe
+*.o
+*.obj
+*.lst
