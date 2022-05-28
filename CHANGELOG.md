@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- ## Unreleased -->
 
+## [1.0.2] · 2022-05-28
+### Docs
+- Added missing v1.0.1 changelog entry.
+- Fixed documentation link in readme.
+
+## [1.0.1] · 2022-05-28
+### Docs
+- Added License file
+
 ## [1.0.0] · 2022-05-28
 ### Added
 - `toCase` function for automatically converting a string to a given casing.
@@ -21,3 +30,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     | `Case.sentence`       | `Sentence case`        |
 
 [1.0.0]: https://gitlab.com/andrej88/in-any-case/-/tree/v1.0.0
+[1.0.1]: https://gitlab.com/andrej88/in-any-case/-/tree/v1.0.1
+[1.0.2]: https://gitlab.com/andrej88/in-any-case/-/tree/v1.0.2

@@ -1,4 +1,4 @@
-[![](https://gitlab.com/andrej88/in-any-case/-/raw/v1.0.0/readme-resources/gitlab-icon-rgb.svg) Main Repo](https://gitlab.com/andrej88/in-any-case)   ·   [![](https://gitlab.com/andrej88/in-any-case/-/raw/v1.0.0/readme-resources/github-icon.svg) Mirror](https://github.com/andrejp88/in-any-case)   ·   [![](https://gitlab.com/andrej88/in-any-case/-/raw/v1.0.0/readme-resources/dub-logo-small.png) Dub Package Registry](https://code.dlang.org/packages/in-any-case)   ·   [![](https://gitlab.com/andrej88/in-any-case/-/raw/v1.0.0/readme-resources/documentation-icon.svg) Documentation](https://in-any-case.dpldocs.info/in_any_case.html)
+[![](https://gitlab.com/andrej88/in-any-case/-/raw/v1.0.2/readme-resources/gitlab-icon-rgb.svg) Main Repo](https://gitlab.com/andrej88/in-any-case)   ·   [![](https://gitlab.com/andrej88/in-any-case/-/raw/v1.0.2/readme-resources/github-icon.svg) Mirror](https://github.com/andrejp88/in-any-case)   ·   [![](https://gitlab.com/andrej88/in-any-case/-/raw/v1.0.2/readme-resources/dub-logo-small.png) Dub Package Registry](https://code.dlang.org/packages/in-any-case)   ·   [![](https://gitlab.com/andrej88/in-any-case/-/raw/v1.0.2/readme-resources/documentation-icon.svg) Documentation](https://in-any-case.dpldocs.info/v1.0.2/index.html)
 
 # In Any Case
 
@@ -49,4 +49,4 @@ expect("hello world".toCase(spongebobCase)).toEqual("hElLo wOrLd");
 library's internals will convert them to UTF-8 and then back. A bit
 wasteful, but it beats having the `Case` struct be a template.
 
-As of v1.0.0, the library is designed for the ASCII alphabet. Letters beyond those found in English may not be converted as expected.
+As of v1.0, the library is designed for the ASCII alphabet. Letters beyond those found in English may not be converted as expected.

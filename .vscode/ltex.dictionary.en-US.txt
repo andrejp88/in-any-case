@@ -1,2 +1,4 @@
 capitalizer
 capitalizations
+changelog
+readme
