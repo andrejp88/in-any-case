@@ -3,7 +3,7 @@
 # In Any Case
 
 In any case is a D language library for converting strings into
-specific cases.
+specific capitalizations.
 
 There are six built-in cases:
 ```d
@@ -42,5 +42,9 @@ Case spongebobCase = Case(
     " " // Separate words using spaces
 );
 
-assert("hello world".toCase(spongebobCase) == "hElLo wOrLd");
+expect("hello world".toCase(spongebobCase)).toEqual("hElLo wOrLd");
 ```
+
+`wstring` (UTF-16) and `dstring` (UTF-32) inputs are accepted, but the
+library's internals will convert them to UTF-8 and then back. A bit
+wasteful, but it beats having the `Case` struct be a template.

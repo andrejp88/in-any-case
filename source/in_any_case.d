@@ -23,10 +23,16 @@ version(unittest) import exceeds_expectations;
 /// last parameter. To force the function to split words by
 /// camelCase/PascalCase rules (i.e. when an uppercase letter is
 /// encountered), pass the empty string `""` as the separator.
-public string toCase(in string input, in Case casing)
+public String toCase(String)(in String input, in Case casing)
 pure
+if (isSomeString!String)
 {
-    return input.smartSplit.joinUsingCasing(casing);
+    return
+        input
+        .to!string                  // Do work in UTF-8 so we can avoid everything being templated
+        .smartSplit
+        .joinUsingCasing(casing)
+        .to!String;                 // Convert back to the original string type when done
 }
 unittest
 {
@@ -52,14 +58,26 @@ unittest
         " " // Separate words using spaces
     );
 
-    assert("hello world".toCase(spongebobCase) == "hElLo wOrLd");
+    expect("hello world".toCase(spongebobCase)).toEqual("hElLo wOrLd");
+}
+unittest
+{
+    // wstrings and dstrings also work
+    expect("hello world"w.toCase(Case.screamingSnake)).toEqual("HELLO_WORLD"w);
+    expect("hello world"d.toCase(Case.screamingSnake)).toEqual("HELLO_WORLD"d);
 }
 
 /// ditto
-public string toCase(in string input, in Case casing, in string separator)
+public String toCase(String)(in String input, in Case casing, in String separator)
 pure
+if (isSomeString!String)
 {
-    return input.dumbSplit(separator).joinUsingCasing(casing);
+    return
+        input
+        .to!string                  // Do work in UTF-8 so we can avoid everything being templated
+        .dumbSplit(separator.to!string)
+        .joinUsingCasing(casing)
+        .to!String;                 // Convert back to the original string type when done
 }
 unittest
 {
@@ -68,6 +86,10 @@ unittest
 
     // Force the input to be interpreted as camelCase or PascalCase
     expect("helLo_woRld".toCase(Case.kebab, "")).toEqual("hel-lo_wo-rld");
+
+    // wstrings and dstrings also work
+    expect("hello.world"w.toCase(Case.screamingSnake, ".")).toEqual("HELLO_WORLD"w);
+    expect("hello.world"d.toCase(Case.screamingSnake, ".")).toEqual("HELLO_WORLD"d);
 }
 
 version(unittest)
