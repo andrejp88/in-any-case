@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- ## Unreleased -->
 
+## [1.0.3] · 2022-05-29
+### Fixed
+- Fixed non-unittest build
+
 ## [1.0.2] · 2022-05-28
 ### Docs
 - Added missing v1.0.1 changelog entry.
@@ -32,3 +36,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.0]: https://gitlab.com/andrej88/in-any-case/-/tree/v1.0.0
 [1.0.1]: https://gitlab.com/andrej88/in-any-case/-/tree/v1.0.1
 [1.0.2]: https://gitlab.com/andrej88/in-any-case/-/tree/v1.0.2
+[1.0.3]: https://gitlab.com/andrej88/in-any-case/-/tree/v1.0.3

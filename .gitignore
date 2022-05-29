@@ -7,6 +7,7 @@ in-any-case.so
 in-any-case.dylib
 in-any-case.dll
 in-any-case.a
+libin-any-case.*
 in-any-case.lib
 in-any-case-test-*
 *.exe

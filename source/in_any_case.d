@@ -109,21 +109,19 @@ version(unittest)
         TestCase(Case.kebab, "kebab-case", "hello-123-world"),
         TestCase(Case.sentence, "Sentence case", "Hello 123 world"),
     ];
-}
 
-static foreach (TestCase from; testCases)
-{
-    static foreach (TestCase to; testCases)
+    static foreach (TestCase from; testCases)
     {
-        @("Convert from " ~ from.name ~ " to " ~ to.name ~ ": " ~ from.helloWorld ~ " -> " ~ to.helloWorld)
-        unittest
+        static foreach (TestCase to; testCases)
         {
-            expect(from.helloWorld.toCase(to.casing)).toEqual(to.helloWorld);
+            @("Convert from " ~ from.name ~ " to " ~ to.name ~ ": " ~ from.helloWorld ~ " -> " ~ to.helloWorld)
+            unittest
+            {
+                expect(from.helloWorld.toCase(to.casing)).toEqual(to.helloWorld);
+            }
         }
     }
 }
-
-
 
 private alias Capitalizer = string[] function(in string[] words) pure;
 
