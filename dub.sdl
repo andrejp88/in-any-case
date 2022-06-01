@@ -5,7 +5,7 @@ copyright "Copyright © 2022, Andrej Petrović"
 license "MIT"
 
 configuration "library" {
-    targetType "library"
+    targetType "sourceLibrary"
 }
 
 configuration "unittest" {
